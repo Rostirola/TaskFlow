@@ -1,5 +1,6 @@
 package com.example.taskflow.service;
 
+import com.example.taskflow.filters.ProjetoFilters;
 import com.example.taskflow.model.Projeto;
 
 import java.util.List;
@@ -12,4 +13,5 @@ public interface ProjetoService {
     void deleteById(Long id);
     void save(Projeto projeto);
     Projeto update(Long id, Projeto atualizado);
+    List<Projeto> findWithFilters(ProjetoFilters filters);
 }

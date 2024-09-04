@@ -19,7 +19,9 @@ public class Projeto {
     @NotBlank
     private String nome;
     private String descricao;
-    private String categoria;
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
+    private Categoria categoria;
     private String dataCadastro;
     private String dataUltimaAlteracao;
 }
